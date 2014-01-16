@@ -1,6 +1,7 @@
 //install mongo (home brew for me) 
 // then install in node - npm install mongo
 //install mongoose - npm install mongoose
+// install express - npm install express
 
 var express = require('express');
 var fs = require('fs');
