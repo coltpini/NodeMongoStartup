@@ -1,0 +1,94 @@
+@import "vars"
+@import "mixins"
+
+.grid
+	top 0
+	left 0
+	font-size 16px
+	position fixed
+	z-index 100000
+	width 100%
+	height 100%
+
+	.col
+		height 100%
+		box-sizing border-box
+		border-right 1px solid rgba(blue, 0.5)
+		width dtCol
+		float left
+		padding 0 dtPad
+
+		span
+			display block
+			height 100%
+			background rgba(blue, 0.15)
+			box-sizing border-box
+			border 1px solid rgba(blue, 0.2)
+			border-top none
+			border-bottom none
+
+	.col:first-child
+		padding-left dtPad * 2
+
+	div.col:last-of-type
+		padding-right dtPad * 2
+
+.rows
+	position absolute
+	top 0
+	left 0
+	width 100%
+	height 100%
+	overflow hidden
+
+	.row
+		//8px?
+		height 10px
+		width 100%
+		background rgba(blue, 0.1)
+
+	.row:nth-child(even)
+		background transparent
+
+
+@media screen and (max-width: 64.5em)
+	.grid
+		.col
+			width tabCol
+			float left
+			padding 0 tabPad
+
+			&:nth-child(9)
+			&:nth-child(10)
+			&:nth-child(11)
+			&:nth-child(12)
+				display none
+
+		.col:first-child
+			padding-left tabPad * 2
+
+		.col:nth-child(8)
+			padding-right tabPad * 2
+
+@media screen and (max-width: 39.8em)
+	.grid
+		.col
+			width mobCol
+			float left
+			padding 0 mobPad
+
+			&:nth-child(5)
+			&:nth-child(6)
+			&:nth-child(7)
+			&:nth-child(8)
+			&:nth-child(9)
+			&:nth-child(10)
+			&:nth-child(11)
+			&:nth-child(12)
+				display none
+
+		.col:first-child
+			padding-left mobPad * 2
+
+		.col:nth-child(4)
+			padding-right mobPad * 2

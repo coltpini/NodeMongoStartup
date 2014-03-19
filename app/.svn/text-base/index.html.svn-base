@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Grid sample page</title>
+	<script src="js/grid.min.js"></script>
+	<style>code {position: absolute; z-index: 1000000; left: 10px; top: 50px;}</style>
+</head>
+<body>
+	<div>
+		use this script to inject grid on any page
+		<code>
+		(function(){
+			var g = document.createElement("script"),
+				s = document.getElementsByTagName("script")[0];
+			g.async = true;
+			g.src = "https://design/mlw/psd/tools/grid/app/js/grid.min.js";
+			g.onload = g.onreadystatechange = function(){
+				var rs = this.readyState;
+				if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+				injectGridStyles();
+				injectGridMarkup();
+			};
+			s.parentNode.insertBefore(g, s);
+		})()
+
+		</code>
+	</div>
+</body>
+</html>

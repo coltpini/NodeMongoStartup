@@ -1,0 +1,87 @@
+rotateElement(n)
+	-webkit-transform rotate(n)
+	-moz-transform rotate(n)
+	-ms-transform rotate(n)
+	-o-transform rotate(n)
+	transform rotate(n)
+
+transition(n, d, e)
+	-webkit-transition n d e
+	-moz-transition n d e
+	-o-transition n d e
+	transition n d e
+
+box-sizing(val)
+	-moz-box-sizing val
+	-webkit-box-sizing val
+	box-sizing val
+
+mTransition(n, d)
+	-webkit-transition n d
+	-moz-transition n d
+	-o-transition n d
+	transition n d
+
+backgroundGradient(a,b)
+	background-color a
+	background-image -webkit-gradient(linear, left top, left bottom, from(a), to(b))
+	background-image -webkit-linear-gradient(top, a, b)
+	background-image -moz-linear-gradient(top, a, b)
+	background-image -o-linear-gradient(top, a, b)
+	background-image linear-gradient(to bottom, a, b)
+
+topGradient(a,b)
+	background-color b
+	background-image -webkit-gradient(linear, left top, left bottom, from(a), to(b))
+	background-image -webkit-linear-gradient(top, a, b)
+	background-image -moz-linear-gradient(top, a, b)
+	background-image -o-linear-gradient(top, a, b)
+	background-image linear-gradient(to bottom, a, b)
+
+heading = 'Roboto Slab', 'helvetica nueu', helvetica, sans-serif
+body = 'Roboto', 'helvetica nueu', helvetica, sans-serif
+
+bodyFont()
+	// should this be relative? Probably.
+	font-size 18px
+	font-size 1.1em
+	line-height 1.6em
+	font-weight 300
+	font-family body
+
+headingFont()
+	font-size 4.4em
+	line-height 1.1em
+	font-weight 100
+	font-family heading
+
+subHeadingFont()
+	font-size 2em
+	line-height 1.1em
+	font-weight 300
+	font-family heading
+
+sectionHeadingFont()
+	font-size 1.3em
+	line-height 1.1em
+	font-weight 300
+	font-family heading
+
+quoteFont()
+	font-size 32em
+	line-height 1.1em
+	font-weight 200
+	font-family body
+
+labelFont()
+	font-size 0.8em
+	line-height 1.1em
+	font-weight 200
+	font-family body
+
+fontReset()
+	font-size inherit
+	line-height inherit
+	font-weight inherit
+	font-family inherit
+	font-decoration inherit

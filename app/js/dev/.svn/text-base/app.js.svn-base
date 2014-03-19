@@ -1,0 +1,52 @@
+var injectGridStyles = function(){
+	var scripts = document.getElementsByTagName("script"), servicePath = '';
+	try{
+		for(var i=0;i<scripts.length;i++){
+			var s = scripts[i];
+
+			if(s.src && s.src.search('grid.min.js') > 0){
+				servicePath = s.src.toLowerCase().replace(/^http[s]?:\/\//,'');
+				servicePath = "//" + servicePath.substring(0, servicePath.lastIndexOf("/js/"));
+			}
+		}
+		if(servicePath === ''){throw "servicePath is empty";}
+	}
+	catch(e){
+		console.log(e);
+		servicePath = '';
+	}
+
+	if(document.createStyleSheet){
+		document.createStyleSheet(servicePath + '/styles/app.css');
+	}
+	else{
+		var style = document.createElement('style');
+		style.innerHTML = '@import "' + servicePath + '/styles/app.css";</style>';
+		document.getElementsByTagName('head')[0].appendChild(style);
+	}
+},
+
+injectGridMarkup = function(){
+	var gridContainer = document.createElement('section');
+		gridContainer.classList.add('grid');
+	var rowContainer = document.createElement('section');
+		rowContainer.classList.add('rows');
+
+	var i = 12;
+	while(i--){
+		gridContainer.innerHTML += '<div class="col"><span></span></div>';
+	}
+	var i = 200;
+	while(i--){
+		rowContainer.innerHTML += '<div class="row"></div>';
+	}
+	document.body.appendChild(rowContainer);
+	document.body.appendChild(gridContainer);
+};
+
+document.onreadystatechange = function () {
+	if (document.readyState == "complete") {
+		injectGridStyles();
+		injectGridMarkup();
+	}
+};

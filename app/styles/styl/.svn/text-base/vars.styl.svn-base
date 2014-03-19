@@ -1,0 +1,59 @@
+//colors
+
+black = #333
+whiteTrans = rgba(white, 0.8)
+blackTrans = rgba(black, 0.8)
+twitterBlue = #00b6f1
+facebookBlue = #3b5998
+pinterestRed = #cb2027
+
+red = #f05357
+blue = #42b4e7
+orange = #fa9e00
+grey = #4c4c4c
+green = #3ccc9c
+purple = #816baf
+maroon = #891927
+lightRed = lighten(red, 50%)
+lightBlue = lighten(blue, 50%)
+lightOrange = lighten(orange, 50%)
+lightGrey = lighten(grey, 50%)
+lightGreen = lighten(green, 50%)
+lightPurple = lighten(purple, 50%)
+lighterGrey = lighten(grey, 80%)
+darkRed = darken(red, 20%)
+darkBlue = darken(blue, 20%)
+darkOrange = darken(orange, 20%)
+darkGrey = darken(grey, 20%)
+darkGreen = darken(green, 20%)
+darkPurple = darken(purple, 20%)
+
+mainColor = blue
+secondaryColor = green
+lightMainColor = lighten(mainColor, 50%)
+darkMainColor = darken(mainColor, 20%)
+
+disabled = grey
+distructuve = red
+
+//transition durations
+slow = 300ms
+med = 100ms
+fast = 50ms
+
+//radii
+radius = 4px
+
+//padding and margin
+m = 20px
+p = 20px
+
+
+//Grid Values
+dtCol = 8.33vw
+tabCol = 12.49vw
+mobCol = 25vw
+
+dtPad = 0.6vw
+tabPad = 1vw
+mobPad = 1.6vw
